@@ -1,0 +1,32 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "feathers-client": "^1.9.0",
+    "feathers-hooks": "^1.8.1",
+    "feathers-reactive": "^0.4.1",
+    "feathers-socketio": "^1.5.2",
+    "formsy-material-ui": "^0.5.5",
+    "formsy-react": "^0.19.2",
+    "material-ui": "^0.17.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "rxjs": "^5.2.0",
+    "socket.io-client": "^1.7.3",
+    "typeface-roboto": "^0.0.22"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "client:start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "babel-eslint": "7.0.0",
+    "eslint": "3.8.1",
+    "eslint-config-react-app": "0.3.0",
+    "eslint-plugin-flowtype": "2.21.0",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.4.1",
+    "lerna": "2.0.0-beta.38"
+  },
+  "scripts": {
+    "server:start": "lerna run server:start --stream",
+    "client:start": "lerna run client:start --stream",
+    "client:build": "lerna run build",
+    "client:serve": "serve --single packages/client/build",
+    "test": "lerna run test --stream"
+  },
+  "dependencies": {
+    "serve": "^5.1.2"
+  }
+}
