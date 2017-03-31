@@ -9,7 +9,7 @@ import FlatButton from 'material-ui/FlatButton'
 import { Form } from 'formsy-react'
 import { FormsyText } from 'formsy-material-ui'
 import { IconButton } from 'material-ui'
-import Pagination from './Pagination'
+import Pagination from 'pagination-material-ui'
 
 const service = feathers.service('articles')
 
