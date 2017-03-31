@@ -12,12 +12,12 @@ Note: there's no authentication, so anyone can read/write to/from the server.
 
 `lerna init`
 
-In package.json add a "scripts" section: 
+In package.json add a "scripts" section:
 
 ```
 "scripts": {
-  "start:server": "lerna run start:server --stream",
-  "start:client": "lerna run start:client --stream",
+  "server:start": "cd packages/server && npm run start",
+  "client:start": "cd packages/client && npm run start",
   "test": "lerna run test --stream"
 }
 ```
@@ -27,17 +27,15 @@ In package.json add a "scripts" section:
 ## server
 
 `yarn global add feathers-cli@pre`
-(using `@pre` as the new version isn't released yet) 
+(using `@pre` as the new version isn't released yet)
 
 `mkdir server && cd $_`
 
 `feathers generate app`
 (accept default options, except choose yarn and disable rest)
 
-`feathers generate service` 
+`feathers generate service`
 (accept default options, call it "articles")
-
-In package.json "scripts" section, change "start" to "start:server"
 
 `cd ..`
 
@@ -56,8 +54,6 @@ Install UI dependencies:
 Install data dependencies:
 
 `yarn add feathers-client feathers-hooks feathers-socketio feathers-reactive rxjs socket.io-client`
-
-In package.json "scripts" section, change "start" to "start:client"
 
 Edit App.js etc
 

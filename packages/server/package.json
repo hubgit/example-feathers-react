@@ -23,7 +23,7 @@
   "scripts": {
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
-    "server:start": "node src/",
+    "start": "node src/",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {

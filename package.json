@@ -10,9 +10,9 @@
     "lerna": "2.0.0-beta.38"
   },
   "scripts": {
-    "server:start": "lerna run server:start --stream",
-    "client:start": "lerna run client:start --stream",
-    "client:build": "lerna run build",
+    "server:start": "cd packages/server && npm run start",
+    "client:start": "cd packages/client && npm run start",
+    "client:build": "lerna run build --stream",
     "client:serve": "serve --single packages/client/build",
     "test": "lerna run test --stream"
   },
