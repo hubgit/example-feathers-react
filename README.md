@@ -8,8 +8,6 @@ Note: there's no authentication, so anyone can read/write to/from the server.
 
 `mkdir example-feathers-react && cd $_`
 
-`git init`
-
 `lerna init`
 
 In package.json add a "scripts" section:
