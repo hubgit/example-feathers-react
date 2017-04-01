@@ -30,7 +30,7 @@ In package.json add a "scripts" section:
 `mkdir server && cd $_`
 
 `feathers generate app`
-(accept default options, except choose yarn and disable rest)
+(accept default options, except choose yarn as the package manager)
 
 `feathers generate service`
 (accept default options, call it "articles")
