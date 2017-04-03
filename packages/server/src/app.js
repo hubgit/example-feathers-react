@@ -51,8 +51,12 @@ app.configure(jwt());
 app.configure(services);
 
 // Add the authentication hook
-app.service('authentication').before({
-  create: authentication.hooks.authenticate(['local', 'jwt'])
+app.service('authentication').hooks({
+  before: {
+    create: [
+      authentication.hooks.authenticate(['local', 'jwt'])
+    ]
+  }
 });
 
 // Configure middleware (see `middleware/index.js`) - always has to be last
