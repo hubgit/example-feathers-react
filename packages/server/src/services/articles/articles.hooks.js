@@ -1,10 +1,12 @@
 'use strict';
 
-
+const auth = require('feathers-authentication');
 
 module.exports = {
   before: {
-    all: [],
+    all: [
+      auth.hooks.authenticate(['jwt'])
+    ],
     find: [],
     get: [],
     create: [],

@@ -30,12 +30,15 @@
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "cors": "^2.8.3",
-    "eslint": "^3.18.0",
     "feathers": "^2.1.1",
+    "feathers-authentication": "pre",
+    "feathers-authentication-jwt": "^0.3.1",
+    "feathers-authentication-local": "^0.3.4",
     "feathers-configuration": "^0.4.1",
     "feathers-errors": "^2.6.2",
     "feathers-hooks": "^1.8.1",
     "feathers-hooks-common": "^2.0.3",
+    "feathers-mongoose": "^5.0.3",
     "feathers-nedb": "^2.6.2",
     "feathers-rest": "^1.7.1",
     "feathers-socketio": "^1.5.2",
@@ -48,6 +51,7 @@
     "winston": "^2.3.1"
   },
   "devDependencies": {
-    "babel-eslint": "7.0.0"
+    "babel-eslint": "7.0.0",
+    "eslint": "^3.19.0"
   }
 }

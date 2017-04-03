@@ -1,5 +1,5 @@
 import React from 'react'
-import feathers from './feathers'
+import feathers from '../feathers'
 import { List, ListItem } from 'material-ui/List'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import ContentAddIcon from 'material-ui/svg-icons/content/add'
@@ -24,32 +24,43 @@ export default class Articles extends React.Component {
   }
 
   componentDidMount () {
-    this.subscriber = this.fetch()
+    this.findItems()
+  }
+
+  componentWillReceiveProps () {
+    this.findItems()
   }
 
   componentWillUnmount () {
     this.subscriber.unsubscribe()
   }
 
-  openForm = () => this.setState({ open: true })
+  findItems = (currentPage = 1, limit = 5) => {
+    if (this.subscriber) {
+      this.subscriber.unsubscribe()
+    }
 
-  closeForm = () => this.setState({ open: false }) && this.form.reset()
-
-  submitForm = () => this.form.submit()
-
-  fetch = (currentPage = 1, limit = 5) => {
-    return service.find({
+    this.subscriber = service.find({
       query: {
         $sort: { title: 1 },
         $limit: limit,
         $skip: (currentPage - 1) * limit
+      },
+      rx: {
+        listStrategy: 'always' // always re-fetch list, to handle removed items
       }
     }).subscribe(items => {
       this.setState({ items })
     })
   }
 
-  paginationChange = (currentPage, limit) => this.fetch(currentPage, limit)
+  paginationChange = (currentPage, limit) => this.findItems(currentPage, limit)
+
+  openForm = () => this.setState({ open: true })
+
+  closeForm = () => this.setState({ open: false }) && this.form.reset()
+
+  submitForm = () => this.form.submit()
 
   createItem = (data) => service.create(data).then(this.closeForm)
 
@@ -59,9 +70,7 @@ export default class Articles extends React.Component {
     const { items, open } = this.state
 
     return items && (
-      <div style={{ padding: 20, maxWidth: 600 }}>
-        <h1>Articles</h1>
-
+      <div style={{ maxWidth: 600 }}>
         <List>
           { items.data.map(item => (
             <ListItem key={item._id} primaryText={item.title} rightIconButton={
@@ -74,7 +83,7 @@ export default class Articles extends React.Component {
 
         <Pagination onChange={this.paginationChange} total={items.total} limit={items.limit}/>
 
-        <FloatingActionButton onTouchTap={this.openForm}>
+        <FloatingActionButton onTouchTap={this.openForm} style={{ margin: 10 }}>
           <ContentAddIcon/>
         </FloatingActionButton>
 
