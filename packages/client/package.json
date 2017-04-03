@@ -19,20 +19,18 @@
     "typeface-roboto": "^0.0.22"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "eslint": "3.8.1",
+    "eslint-config-react-app": "0.3.0",
+    "eslint-plugin-flowtype": "2.21.0",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "env": {
-      "es6": true,
-      "browser": true
-    },
-    "extends": "react-app"
   }
 }
