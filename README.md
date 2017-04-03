@@ -1,7 +1,5 @@
 An example server ([Feathers](http://feathersjs.com/), NeDB) + client ([React](https://github.com/facebookincubator/create-react-app), via [Create React App](https://github.com/facebookincubator/create-react-app)) to demonstrate real-time editing.
 
-Note: there's no authentication, so anyone can read/write to/from the server.
-
 # Notes
 
 ## monorepo
