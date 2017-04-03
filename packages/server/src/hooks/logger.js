@@ -5,7 +5,7 @@ const logger = require('winston');
 
 module.exports = function() {
   return function(hook) {
-    let message = `${hook.type}: ${hook.path} - Method: ${hook.method}`;
+    let message = `${hook.type}:${hook.path}:${hook.method}`;
 
     if (hook.type === 'error') {
       message += `: ${hook.error.message}`;
