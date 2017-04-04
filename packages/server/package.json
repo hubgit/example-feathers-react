@@ -21,8 +21,8 @@
     "yarn": ">= 0.18.0"
   },
   "scripts": {
-    "test": "npm run eslint && npm run mocha",
-    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "test": "npm run standard && npm run mocha",
+    "lint": "standard src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "mocha": "mocha test/ --recursive"
   },
@@ -48,8 +48,12 @@
     "request-promise": "^4.2.0",
     "winston": "^2.3.1"
   },
-  "devDependencies": {
-    "babel-eslint": "7.0.0",
-    "eslint": "^3.19.0"
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "extends": "standard"
   }
 }

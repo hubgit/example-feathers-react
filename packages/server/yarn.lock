@@ -112,6 +112,13 @@ array-uniq@^1.0.1:
   version "1.0.3"
   resolved array-uniq-1.0.3.tgz#af6ac877a25cc7f74e058894753858dfdb24fdb6
 
+array.prototype.find@^2.0.1:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/array.prototype.find/-/array.prototype.find-2.0.4.tgz#556a5c5362c08648323ddaeb9de9d14bc1864c90"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.7.0"
+
 arraybuffer.slice@0.0.6:
   version "0.0.6"
   resolved arraybuffer.slice-0.0.6.tgz#f33b2159f0532a3f3107a272c0ccfbd1ad2979ca
@@ -510,6 +517,10 @@ dashify@^0.2.0:
   version "0.2.2"
   resolved dashify-0.2.2.tgz#6a07415a01c91faf4a32e38d9dfba71f61cb20fe
 
+debug-log@^1.0.0:
+  version "1.0.1"
+  resolved debug-log-1.0.1.tgz#2307632d4c04382b8df8a32f70b895046d52745f
+
 debug@2.2.0, debug@~2.2.0:
   version "2.2.0"
   resolved debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da
@@ -538,6 +549,24 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34
 
+define-properties@^1.1.2:
+  version "1.1.2"
+  resolved define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94
+  dependencies:
+    foreach "^2.0.5"
+    object-keys "^1.0.8"
+
+deglob@^2.1.0:
+  version "2.1.0"
+  resolved deglob-2.1.0.tgz#4d44abe16ef32c779b4972bd141a80325029a14a
+  dependencies:
+    find-root "^1.0.0"
+    glob "^7.0.5"
+    ignore "^3.0.9"
+    pkg-config "^1.1.0"
+    run-parallel "^1.1.2"
+    uniq "^1.0.1"
+
 del@^2.0.2:
   version "2.2.2"
   resolved del-2.2.2.tgz#c12c981d067846c84bcaf862cff930d907ffd1a8
@@ -565,6 +594,13 @@ destroy@~1.0.4:
 dns-prefetch-control@0.1.0:
   version "0.1.0"
   resolved dns-prefetch-control-0.1.0.tgz#60ddb457774e178f1f9415f0cabb0e85b0b300b2
+
+doctrine@^1.2.2:
+  version "1.5.0"
+  resolved doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa
+  dependencies:
+    esutils "^2.0.2"
+    isarray "^1.0.0"
 
 doctrine@^2.0.0:
   version "2.0.0"
@@ -636,6 +672,29 @@ engine.io@1.8.3:
     debug "2.3.3"
     engine.io-parser "1.3.2"
     ws "1.1.2"
+
+error-ex@^1.2.0:
+  version "1.3.1"
+  resolved error-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc
+  dependencies:
+    is-arrayish "^0.2.1"
+
+es-abstract@^1.7.0:
+  version "1.7.0"
+  resolved es-abstract-1.7.0.tgz#dfade774e01bfcd97f96180298c449c8623fb94c
+  dependencies:
+    es-to-primitive "^1.1.1"
+    function-bind "^1.1.0"
+    is-callable "^1.1.3"
+    is-regex "^1.0.3"
+
+es-to-primitive@^1.1.1:
+  version "1.1.1"
+  resolved es-to-primitive-1.1.1.tgz#45355248a88979034b6792e19bb81f2b7975dd0d
+  dependencies:
+    is-callable "^1.1.1"
+    is-date-object "^1.0.1"
+    is-symbol "^1.0.1"
 
 es3ify@^0.1.3:
   version "0.1.4"
@@ -714,9 +773,33 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^3.19.0:
-  version "3.19.0"
-  resolved eslint-3.19.0.tgz#c8fc6201c7f40dd08941b87c085767386a679acc
+eslint-config-standard-jsx@3.3.0:
+  version "3.3.0"
+  resolved eslint-config-standard-jsx-3.3.0.tgz#cab0801a15a360bf63facb97ab22fbdd88d8a5e0
+
+eslint-config-standard@7.1.0:
+  version "7.1.0"
+  resolved eslint-config-standard-7.1.0.tgz#47e769ea0739f5b2d5693b1a501c21c9650fafcf
+
+eslint-plugin-promise@~3.4.0:
+  version "3.4.2"
+  resolved eslint-plugin-promise-3.4.2.tgz#1be2793eafe2d18b5b123b8136c269f804fe7122
+
+eslint-plugin-react@~6.9.0:
+  version "6.9.0"
+  resolved eslint-plugin-react-6.9.0.tgz#54c2e9906b76f9d10142030bdc34e9d6840a0bb2
+  dependencies:
+    array.prototype.find "^2.0.1"
+    doctrine "^1.2.2"
+    jsx-ast-utils "^1.3.4"
+
+eslint-plugin-standard@~2.0.1:
+  version "2.0.1"
+  resolved eslint-plugin-standard-2.0.1.tgz#3589699ff9c917f2c25f76a916687f641c369ff3
+
+eslint@~3.18.0:
+  version "3.18.0"
+  resolved eslint-3.18.0.tgz#647e985c4ae71502d20ac62c109f66d5104c8a4b
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -1054,6 +1137,16 @@ finalhandler@~1.0.0:
     statuses "~1.3.1"
     unpipe "~1.0.0"
 
+find-root@^1.0.0:
+  version "1.0.0"
+  resolved find-root-1.0.0.tgz#962ff211aab25c6520feeeb8d6287f8f6e95807a
+
+find-up@^2.0.0:
+  version "2.1.0"
+  resolved find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7
+  dependencies:
+    locate-path "^2.0.0"
+
 flat-cache@^1.2.1:
   version "1.2.2"
   resolved flat-cache-1.2.2.tgz#fa86714e72c21db88601761ecf2f555d1abc6b96
@@ -1095,6 +1188,10 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f
 
+function-bind@^1.0.2, function-bind@^1.1.0:
+  version "1.1.0"
+  resolved function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771
+
 generate-function@^2.0.0:
   version "2.0.0"
   resolved generate-function-2.0.0.tgz#6858fe7c0969b7d4e9093337647ac79f60dfbe74
@@ -1104,6 +1201,10 @@ generate-object-property@^1.1.0:
   resolved generate-object-property-1.2.0.tgz#9c0e1c40308ce804f4783618b937fa88f99d50d0
   dependencies:
     is-property "^1.0.0"
+
+get-stdin@^5.0.1:
+  version "5.0.1"
+  resolved get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398
 
 getpass@^0.1.1:
   version "0.1.6"
@@ -1168,6 +1269,12 @@ has-cors@1.1.0:
   version "1.1.0"
   resolved has-cors-1.1.0.tgz#5e474793f7ea9843d1bb99c23eef49ff126fff39
 
+has@^1.0.1:
+  version "1.0.1"
+  resolved has-1.0.1.tgz#8461733f538b0837c9361e39a9ab9e9704dc2f28
+  dependencies:
+    function-bind "^1.0.2"
+
 hawk@~3.1.3:
   version "3.1.3"
   resolved hawk-3.1.3.tgz#078444bd7c1640b0fe540d2c9b73d59678e8e1c4
@@ -1212,6 +1319,13 @@ hoek@2.x.x:
   version "2.16.3"
   resolved hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed
 
+home-or-tmp@^2.0.0:
+  version "2.0.0"
+  resolved home-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8
+  dependencies:
+    os-homedir "^1.0.0"
+    os-tmpdir "^1.0.1"
+
 hpkp@2.0.0:
   version "2.0.0"
   resolved hpkp-2.0.0.tgz#10e142264e76215a5d30c44ec43de64dee6d1672
@@ -1247,7 +1361,7 @@ ienoopen@1.0.0:
   version "1.0.0"
   resolved ienoopen-1.0.0.tgz#346a428f474aac8f50cf3784ea2d0f16f62bda6b
 
-ignore@^3.2.0:
+ignore@^3.0.9, ignore@^3.2.0:
   version "3.2.6"
   resolved ignore-3.2.6.tgz#26e8da0644be0bb4cb39516f6c79f0e0f4ffe48c
 
@@ -1313,6 +1427,18 @@ ipaddr.js@1.3.0:
   version "1.3.0"
   resolved ipaddr.js-1.3.0.tgz#1e03a52fdad83a8bbb2b25cbf4998b4cffcd3dec
 
+is-arrayish@^0.2.1:
+  version "0.2.1"
+  resolved is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d
+
+is-callable@^1.1.1, is-callable@^1.1.3:
+  version "1.1.3"
+  resolved is-callable-1.1.3.tgz#86eb75392805ddc33af71c92a0eedf74ee7604b2
+
+is-date-object@^1.0.1:
+  version "1.0.1"
+  resolved is-date-object-1.0.1.tgz#9aa20eb6aeebbff77fbd33e74ca01b33581d3a16
+
 is-fullwidth-code-point@^1.0.0:
   version "1.0.0"
   resolved is-fullwidth-code-point-1.0.0.tgz#ef9e31386f031a7f0d643af82fde50c457ef00cb
@@ -1352,11 +1478,21 @@ is-property@^1.0.0:
   version "1.0.2"
   resolved is-property-1.0.2.tgz#57fe1c4e48474edd65b09911f26b1cd4095dda84
 
+is-regex@^1.0.3:
+  version "1.0.4"
+  resolved is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491
+  dependencies:
+    has "^1.0.1"
+
 is-resolvable@^1.0.0:
   version "1.0.0"
   resolved is-resolvable-1.0.0.tgz#8df57c61ea2e3c501408d100fb013cf8d6e0cc62
   dependencies:
     tryit "^1.0.1"
+
+is-symbol@^1.0.1:
+  version "1.0.1"
+  resolved is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572
 
 is-typedarray@~1.0.0:
   version "1.0.0"
@@ -1465,6 +1601,12 @@ jstransform@~3.0.0:
     esprima-fb "~3001.1.0-dev-harmony-fb"
     source-map "0.1.31"
 
+jsx-ast-utils@^1.3.4:
+  version "1.4.0"
+  resolved jsx-ast-utils-1.4.0.tgz#5afe38868f56bc8cc7aeaef0100ba8c75bd12591
+  dependencies:
+    object-assign "^4.1.0"
+
 jwa@^1.1.4:
   version "1.1.5"
   resolved jwa-1.1.5.tgz#a0552ce0220742cd52e153774a32905c30e756e5
@@ -1502,11 +1644,27 @@ lie@3.0.2:
     inline-process-browser "^1.0.0"
     unreachable-branch-transform "^0.3.0"
 
+load-json-file@^2.0.0:
+  version "2.0.0"
+  resolved load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8
+  dependencies:
+    graceful-fs "^4.1.2"
+    parse-json "^2.2.0"
+    pify "^2.0.0"
+    strip-bom "^3.0.0"
+
 localforage@^1.3.0:
   version "1.5.0"
   resolved localforage-1.5.0.tgz#6b994e19b56611fa85df3992df397ac4ab66e815
   dependencies:
     lie "3.0.2"
+
+locate-path@^2.0.0:
+  version "2.0.0"
+  resolved locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e
+  dependencies:
+    p-locate "^2.0.0"
+    path-exists "^3.0.0"
 
 lodash.get@^4.4.2:
   version "4.4.2"
@@ -1582,6 +1740,10 @@ minimist@0.0.8:
   version "0.0.8"
   resolved minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d
 
+minimist@^1.1.0:
+  version "1.2.0"
+  resolved minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284
+
 mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   version "0.5.1"
   resolved mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903
@@ -1646,7 +1808,7 @@ object-component@0.0.3:
   version "0.0.3"
   resolved object-component-0.0.3.tgz#f0c69aa50efc95b866c186f400a33769cb2f1291
 
-object-keys@^1.0.6:
+object-keys@^1.0.6, object-keys@^1.0.8:
   version "1.0.11"
   resolved object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d
 
@@ -1688,6 +1850,26 @@ options@>=0.0.5:
 os-homedir@^1.0.0:
   version "1.0.2"
   resolved os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3
+
+os-tmpdir@^1.0.1:
+  version "1.0.2"
+  resolved os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274
+
+p-limit@^1.1.0:
+  version "1.1.0"
+  resolved p-limit-1.1.0.tgz#b07ff2d9a5d88bec806035895a2bab66a27988bc
+
+p-locate@^2.0.0:
+  version "2.0.0"
+  resolved p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43
+  dependencies:
+    p-limit "^1.1.0"
+
+parse-json@^2.2.0:
+  version "2.2.0"
+  resolved parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9
+  dependencies:
+    error-ex "^1.2.0"
 
 parsejson@0.0.3:
   version "0.0.3"
@@ -1735,6 +1917,10 @@ passport@^0.3.2:
     passport-strategy "1.x.x"
     pause "0.0.1"
 
+path-exists@^3.0.0:
+  version "3.0.0"
+  resolved path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515
+
 path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f
@@ -1772,6 +1958,21 @@ pinkie-promise@^2.0.0:
 pinkie@^2.0.0:
   version "2.0.4"
   resolved pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870
+
+pkg-conf@^2.0.0:
+  version "2.0.0"
+  resolved pkg-conf-2.0.0.tgz#071c87650403bccfb9c627f58751bfe47c067279
+  dependencies:
+    find-up "^2.0.0"
+    load-json-file "^2.0.0"
+
+pkg-config@^1.1.0:
+  version "1.1.1"
+  resolved pkg-config-1.1.1.tgz#557ef22d73da3c8837107766c52eadabde298fe4
+  dependencies:
+    debug-log "^1.0.0"
+    find-root "^1.0.0"
+    xtend "^4.0.1"
 
 platform@1.3.3:
   version "1.3.3"
@@ -1957,6 +2158,10 @@ run-async@^0.1.0:
   dependencies:
     once "^1.3.0"
 
+run-parallel@^1.1.2:
+  version "1.1.6"
+  resolved run-parallel-1.1.6.tgz#29003c9a2163e01e2d2dfc90575f2c6c1d61a039
+
 rx-lite@^3.1.2:
   version "3.1.2"
   resolved rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102
@@ -2090,6 +2295,28 @@ sshpk@^1.7.0:
 stack-trace@0.0.x:
   version "0.0.9"
   resolved stack-trace-0.0.9.tgz#a8f6eaeca90674c333e7c43953f275b451510695
+
+standard-engine@~5.4.0:
+  version "5.4.0"
+  resolved standard-engine-5.4.0.tgz#e0e86959ea0786425d3383e40c1bf70d2f985579
+  dependencies:
+    deglob "^2.1.0"
+    get-stdin "^5.0.1"
+    home-or-tmp "^2.0.0"
+    minimist "^1.1.0"
+    pkg-conf "^2.0.0"
+
+standard@^9.0.2:
+  version "9.0.2"
+  resolved standard-9.0.2.tgz#9bd3b9467492e212b1914d78553943ff9b48fd99
+  dependencies:
+    eslint "~3.18.0"
+    eslint-config-standard "7.1.0"
+    eslint-config-standard-jsx "3.3.0"
+    eslint-plugin-promise "~3.4.0"
+    eslint-plugin-react "~6.9.0"
+    eslint-plugin-standard "~2.0.1"
+    standard-engine "~5.4.0"
 
 "statuses@>= 1.3.1 < 2", statuses@~1.3.1:
   version "1.3.1"
@@ -2232,6 +2459,10 @@ ultron@1.0.x:
 underscore@~1.4.4:
   version "1.4.4"
   resolved underscore-1.4.4.tgz#61a6a32010622afa07963bf325203cf12239d604
+
+uniq@^1.0.1:
+  version "1.0.1"
+  resolved uniq-1.0.1.tgz#b31c5ae8254844a3a8281541ce2b04b865a734ff
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
