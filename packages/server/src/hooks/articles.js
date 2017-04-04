@@ -1,11 +1,9 @@
-'use strict';
-
-const auth = require('feathers-authentication');
+const { authenticate } = require('feathers-authentication').hooks;
 
 module.exports = {
   before: {
     all: [
-      auth.hooks.authenticate(['jwt'])
+      authenticate('jwt')
     ],
     find: [],
     get: [],
@@ -34,4 +32,4 @@ module.exports = {
     patch: [],
     remove: []
   }
-};
+}
