@@ -1,6 +1,6 @@
 import feathers from './feathers'
 
-export default (dispatch, data = {}) => {
+export default (dispatch, data) => {
   return feathers.authenticate(data)
     .then(response => feathers.passport.verifyJWT(response.accessToken))
     .then(payload => {
