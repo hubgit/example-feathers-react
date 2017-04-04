@@ -16,6 +16,8 @@ const socketio = require('feathers-socketio')
 const handler = require('feathers-errors/handler')
 const notFound = require('feathers-errors/not-found')
 
+const authentication = require('./authentication')
+
 const app = feathers()
 
 // Load app configuration
@@ -32,6 +34,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.configure(hooks())
 app.configure(rest())
 app.configure(socketio())
+
+app.configure(authentication)
 
 // Set up our services
 glob.sync('./services/*.js', { cwd: __dirname })

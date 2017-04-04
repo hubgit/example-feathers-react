@@ -1,17 +1,19 @@
 const authentication = require('feathers-authentication')
 const local = require('feathers-authentication-local')
 const jwt = require('feathers-authentication-jwt')
-const hooks = require('../hooks/authentication')
 
 module.exports = function () {
   const app = this
 
-  const serviceName = 'authentication'
-
-  app.configure(authentication(app.get('auth')))
+  // TODO: store the secret in env
+  app.configure(authentication({ secret: 'change-this-secret' }))
   app.configure(local())
   app.configure(jwt())
 
   // Add the authentication hook
-  app.service(serviceName).hooks(hooks)
+  app.service('authentication').hooks({
+    before: {
+      create: authentication.hooks.authenticate(['local', 'jwt'])
+    }
+  })
 }
