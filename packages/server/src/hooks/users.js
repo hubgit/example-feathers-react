@@ -1,6 +1,6 @@
-const { hashPassword } = require('feathers-authentication-local').hooks;
-const { authenticate } = require('feathers-authentication').hooks;
-const { remove } = require('feathers-hooks-common');
+const { hashPassword } = require('feathers-authentication-local').hooks
+const { authenticate } = require('feathers-authentication').hooks
+const { remove } = require('feathers-hooks-common')
 
 module.exports = {
   before: {
@@ -48,4 +48,4 @@ module.exports = {
     patch: [],
     remove: []
   }
-};
+}

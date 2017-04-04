@@ -1,26 +1,26 @@
-const logger = require('winston');
+const logger = require('winston')
 
 const logRequest = () => {
   return function (hook) {
-    let message = `${hook.type}:${hook.path}:${hook.method}`;
+    let message = `${hook.type}:${hook.path}:${hook.method}`
 
     if (hook.type === 'error') {
-      message += `: ${hook.error.message}`;
+      message += `: ${hook.error.message}`
     }
 
-    logger.info(message);
-    logger.debug('hook.data', hook.data);
-    logger.debug('hook.params', hook.params);
+    logger.info(message)
+    logger.debug('hook.data', hook.data)
+    logger.debug('hook.params', hook.params)
 
     if (hook.result) {
-      logger.debug('hook.result', hook.result);
+      logger.debug('hook.result', hook.result)
     }
 
     if (hook.error) {
-      logger.error(hook.error);
+      logger.error(hook.error)
     }
-  };
-};
+  }
+}
 
 module.exports = {
   before: {
@@ -31,5 +31,5 @@ module.exports = {
   },
   error: {
     all: logRequest()
-  },
+  }
 }

@@ -1,12 +1,12 @@
-const NeDB = require('nedb');
-const path = require('path');
-const createService = require('feathers-nedb');
-const hooks = require('../hooks/users');
+const NeDB = require('nedb')
+const path = require('path')
+const createService = require('feathers-nedb')
+const hooks = require('../hooks/users')
 
 module.exports = function () {
-  const app = this;
+  const app = this
 
-  const serviceName = 'users';
+  const serviceName = 'users'
 
   app.use(serviceName, createService({
     name: serviceName,
@@ -15,12 +15,11 @@ module.exports = function () {
       autoload: true
     }),
     paginate: app.get('paginate')
-  }));
-
+  }))
 
   const filters = function (data, connection, hook) { // eslint-disable-line no-unused-vars
-    return data; // TODO: actual filters
-  };
+    return data // TODO: actual filters
+  }
 
-  app.service(serviceName).hooks(hooks).filter(filters);
-};
+  app.service(serviceName).hooks(hooks).filter(filters)
+}
