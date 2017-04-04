@@ -35,6 +35,7 @@ app.configure(hooks())
 app.configure(rest())
 app.configure(socketio())
 
+// Create the authentication service
 app.configure(authentication)
 
 // Set up our services
