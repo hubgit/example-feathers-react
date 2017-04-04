@@ -29,7 +29,6 @@ export default connect(
   dispatch => ({
     signOut: () => {
       feathers.logout().then(() => {
-        feathers.set('user', null)
         dispatch({ type: 'SIGNED_OUT' })
       })
     }
