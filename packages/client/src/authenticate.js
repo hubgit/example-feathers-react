@@ -14,7 +14,7 @@ export default (dispatch, data) => {
 
       return query
     })
-    .catch(err => {
+    .catch(() => {
       dispatch({ type: 'SIGNED_OUT' })
     })
 }

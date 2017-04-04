@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { MuiThemeProvider } from 'material-ui'
-import { Provider as StoreProvider } from 'react-redux';
+import { Provider as StoreProvider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
 // store
-import store from './store';
+import store from './store'
 
 // authentication
-import authenticate from './authenticate';
+import authenticate from './authenticate'
 
 // styles
-import 'typeface-roboto';
+import 'typeface-roboto'
 
 // components
 import App from './components/App'

@@ -66,7 +66,7 @@ export default class Articles extends React.Component {
 
   removeItem = (id) => service.remove(id)
 
-  render() {
+  render () {
     const { items, open } = this.state
 
     return items && (

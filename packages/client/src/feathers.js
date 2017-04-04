@@ -1,5 +1,5 @@
 import feathers from 'feathers/client'
-import io from 'socket.io-client';
+import io from 'socket.io-client'
 import socketio from 'feathers-socketio/client'
 // import rest from 'feathers-rest/client'
 // import fetch from 'isomorphic-fetch'

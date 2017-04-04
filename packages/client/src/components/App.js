@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
-import Articles from './Articles';
+import Articles from './Articles'
 import PrivateRoute from './PrivateRoute'
 import Signup from './Signup'
 import Signin from './Signin'
