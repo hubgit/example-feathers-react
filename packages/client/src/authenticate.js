@@ -6,13 +6,9 @@ export default (dispatch, data) => {
     .then(payload => {
       if (!payload.userId) return
 
-      const query = feathers.service('users').get(payload.userId)
-
-      query.subscribe(user => {
+      return feathers.service('users').get(payload.userId).subscribe(user => {
         dispatch({ type: 'SIGNED_IN', payload: user })
       })
-
-      return query
     })
     .catch(() => {
       dispatch({ type: 'SIGNED_OUT' })
