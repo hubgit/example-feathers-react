@@ -7,17 +7,25 @@ import { connect } from 'react-redux'
 import './Nav.css'
 
 const Nav = ({ currentUser, signOut }) => {
+  if (!currentUser) {
+    return (
+      <List>
+        <ListItem
+          primaryText="Sign in"
+          containerElement={<NavLink to="/signin"/>}/>
+      </List>
+    )
+  }
+
   return (
     <List>
-      { currentUser
-        ? <ListItem
-            primaryText={currentUser.name}
-            secondaryText="Sign out"
-            onTouchTap={signOut}/>
-        : <ListItem
-            primaryText="Sign in"
-            containerElement={<NavLink to="/signin"/>}/>
-      }
+      <ListItem
+        primaryText="Articles"
+        containerElement={<NavLink to="/articles"/>}/>
+      <ListItem
+        primaryText={currentUser.name}
+        secondaryText="Sign out"
+        onTouchTap={signOut}/>
     </List>
   )
 }
