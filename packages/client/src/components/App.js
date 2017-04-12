@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
+import Article from './Article'
 import Articles from './Articles'
 import PrivateRoute from './PrivateRoute'
 import Signup from './Signup'
@@ -33,6 +34,7 @@ const App = () => {
 
       <div style={styles.main}>
         <PrivateRoute path="/articles" exact component={Articles}/>
+        <PrivateRoute path="/articles/:articleId" exact component={Article}/>
         <Route path="/signup" exact component={Signup}/>
         <Route path="/signin" exact component={Signin}/>
       </div>

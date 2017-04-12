@@ -10,6 +10,7 @@ import { Form } from 'formsy-react'
 import { FormsyText } from 'formsy-material-ui'
 import { IconButton } from 'material-ui'
 import Pagination from 'pagination-material-ui'
+import { Link } from 'react-router-dom'
 
 const service = feathers.service('articles')
 
@@ -77,7 +78,7 @@ export default class Articles extends React.Component {
               <IconButton touch={true} onTouchTap={() => this.removeItem(item._id)}>
                 <ContentRemoveIcon color="#aaa"/>
               </IconButton>
-            }/>
+            } containerElement={<Link to={`/articles/${item._id}`}/>}/>
           )) }
         </List>
 
