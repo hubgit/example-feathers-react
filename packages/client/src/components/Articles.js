@@ -69,6 +69,7 @@ class Articles extends React.Component {
 
   render () {
     const { items, open } = this.state
+    const { history } = this.props
 
     return items && (
       <div style={{ maxWidth: 600 }}>
