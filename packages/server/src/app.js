@@ -12,6 +12,7 @@ const configuration = require('feathers-configuration')
 const hooks = require('feathers-hooks')
 const rest = require('feathers-rest')
 const socketio = require('feathers-socketio')
+const mongoose = require('mongoose')
 
 const handler = require('feathers-errors/handler')
 const notFound = require('feathers-errors/not-found')
@@ -29,6 +30,10 @@ app.use(helmet())
 app.use(compress())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+// Set up Mongoose
+mongoose.Promise = global.Promise
+mongoose.connect(app.get('mongodb'))
 
 // Set up plugins and providers
 app.configure(hooks())

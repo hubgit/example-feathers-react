@@ -1,6 +1,5 @@
 /node_modules
 /coverage
-/data
 .DS_Store
 .env
 *.log

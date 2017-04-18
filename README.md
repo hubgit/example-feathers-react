@@ -1,4 +1,4 @@
-An example server ([Feathers](http://feathersjs.com/), NeDB) + client ([React](https://github.com/facebookincubator/create-react-app), via [Create React App](https://github.com/facebookincubator/create-react-app)) to demonstrate real-time editing.
+An example server ([Feathers](http://feathersjs.com/), MongoDB) + client ([React](https://github.com/facebookincubator/create-react-app), via [Create React App](https://github.com/facebookincubator/create-react-app)) to demonstrate real-time editing.
 
 # Notes
 
@@ -31,7 +31,7 @@ In package.json add a "scripts" section:
 (accept default options, except choose yarn as the package manager)
 
 `feathers generate service`
-(accept default options, call it "articles")
+(accept default options, except choose Mongoose as the database; call it "articles")
 
 `cd ..`
 

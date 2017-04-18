@@ -1,19 +1,20 @@
-const NeDB = require('nedb')
-const path = require('path')
 const hooks = require('../hooks/articles')
-const createService = require('feathers-nedb')
+const createService = require('feathers-mongoose')
+const mongoose = require('mongoose')
 
 module.exports = function () {
   const app = this
 
   const serviceName = 'articles'
 
+  const schema = new mongoose.Schema({
+    title: String,
+    created: { type: Date, default: Date.now }
+  })
+
   app.use(serviceName, createService({
     name: serviceName,
-    Model: new NeDB({
-      filename: path.join(app.get('nedb'), 'articles.db'),
-      autoload: true
-    }),
+    Model: mongoose.model('Article', schema),
     paginate: app.get('paginate')
   }))
 
