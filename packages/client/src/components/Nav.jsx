@@ -1,7 +1,7 @@
 import React from 'react'
 import feathers from '../feathers'
 import { List, ListItem } from 'material-ui'
-import { NavLink } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import './Nav.css'
@@ -30,7 +30,7 @@ const Nav = ({ currentUser, signOut }) => {
   )
 }
 
-export default connect(
+export default withRouter(connect(
   state => ({
     currentUser: state.currentUser
   }),
@@ -41,4 +41,4 @@ export default connect(
       })
     }
   })
-)(Nav)
+)(Nav))
